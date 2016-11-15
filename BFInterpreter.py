@@ -18,6 +18,7 @@ tape[994] = 1
 
 
 def display():
+    print()
     print('%9s' % 'Index:', end="")
     if index > 3 and index < 993:
         for i in range(7):
@@ -99,10 +100,10 @@ def interactive():
             index -= 1
         elif char == ':':
 
-            print(tape[index])
+            print(tape[index], end = "")
         elif char == '.':
 
-            print(chr(int(tape[index])))
+            print(chr(int(tape[index])), end = "")
 
         elif char == '{':
 
@@ -145,4 +146,3 @@ def interactive():
 while True:
     display()
     interactive()
-
